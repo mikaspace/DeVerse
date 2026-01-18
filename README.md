@@ -1,1 +1,1 @@
-# SynapseDevs
+# CS3A DeVerse
