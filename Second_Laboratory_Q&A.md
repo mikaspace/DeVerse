@@ -1,4 +1,4 @@
-# Comprehensive Analysis of Multithreading vs Multiprocessing
+# Analysis of Multithreading vs Multiprocessing
 
 ## Lab Question 1: What is the difference between multithreading and multiprocessing?
 - **Multithreading**: A method of running multiple threads (smaller units of a process) within a single process to achieve concurrent execution. It is lighter on memory and context switching, making it efficient for tasks that are I/O bound.
