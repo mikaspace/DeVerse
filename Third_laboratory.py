@@ -5,21 +5,16 @@ import threading
 # PART A – Task Parallelism
 
 def compute_sss(salary):
-    print(f"SSS computed by {threading.current_thread().name}")
     return salary * 0.045
 
 def compute_philhealth(salary):
-    print(f"PhilHealth computed by {threading.current_thread().name}")
     return salary * 0.025
 
 def compute_pagibig(salary):
-    print(f"Pag-IBIG computed by {threading.current_thread().name}")
     return salary * 0.02
 
 def compute_tax(salary):
-    print(f"Tax computed by {threading.current_thread().name}")
     return salary * 0.10
-
 
 def task_parallelism_example():
     name = "Alice"
@@ -85,9 +80,7 @@ def data_parallelism_example():
             print(f"Net Salary: {net_salary:.2f}")
 
 
-# -------------------------------
-# MAIN (Required for Windows)
-# -------------------------------
+# MAIN
 
 if __name__ == "__main__":
     task_parallelism_example()
