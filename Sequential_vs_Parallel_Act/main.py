@@ -1,4 +1,4 @@
-from sorting import merge_sort
+from sequential_sorting import merge_sort
 from parallel_sorting import parallel_merge_sort
 from searching import linear_search, parallel_linear_search
 from utils import (
