@@ -18,12 +18,12 @@ The objective is to understand:
 
 ## Group Members
 
-| Member                | Responsibility                              |
-| --------------------- | ------------------------------------------- |
-| Oplimo, Kent Louie S. | Sequential Merge Sort                       |
-| Member 2              | Parallel Merge Sort                         |
-| Member 3              | Sequential and Parallel Linear Search       |
-| Seromines             | Dataset Generation, Timing, Testing, README |
+| Member                    | Responsibility                              |
+| ------------------------  | ------------------------------------------- |
+| Oplimo, Kent Louie S.     | Sequential Merge Sort                       |
+| Member 2                  | Parallel Merge Sort                         |
+| Member 3                  | Sequential and Parallel Linear Search       |
+| Seromines, Ralph Joshua A.| Dataset Generation, Timing, Testing, README |
 
 ---
 
@@ -98,6 +98,11 @@ One of the main challenges I encountered was managing parallel processes and ens
 
 Overall, this activity helped me understand that while parallelism can improve performance, it is only beneficial when the problem size justifies the added complexity.
 
+### Seromines, Ralph Joshua A.
+In this activity, I handled dataset generation, timing, and integration of the program. During testing, I observed that sequential algorithms were faster for small datasets due to lower overhead, while parallel algorithms performed better for larger datasets because they can process tasks simultaneously.
+
+One challenge was ensuring that all results were correct before analyzing performance. This activity showed me that parallel algorithms are not always faster, and their effectiveness depends on the workload and system overhead.
+
 ---
 
 ## Demo
@@ -115,7 +120,7 @@ Sequential_vs_Parallel_Act/
 ├── parallel_sorting.py
 ├── searching.py
 ├── utils.py
-└── README.md
+└── README.md 
 ```
 
 ---
