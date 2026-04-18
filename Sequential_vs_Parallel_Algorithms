@@ -1,8 +1,14 @@
 import random
+import time
+from multiprocessing import Process, Queue
+
 
 def generate_data(N):
+    # Generate a uniform list of random integers for testing.
     return [random.randint(1, 1000000) for _ in range(N)]
 
+
+# Sequential Sorting Algorithm
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -10,8 +16,8 @@ def merge_sort(arr):
     mid = len(arr) // 2
     left = merge_sort(arr[:mid])
     right = merge_sort(arr[mid:])
-
     return merge(left, right)
+
 
 def merge(left, right):
     result = []
@@ -28,3 +34,7 @@ def merge(left, right):
     result.extend(left[i:])
     result.extend(right[j:])
     return result
+
+
+def chunk_sort_worker(chunk, q, index):
+    q.put((index, merge_sort(chunk)))
