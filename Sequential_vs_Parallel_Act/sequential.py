@@ -1,26 +1,25 @@
-def merge(left, right):
-    result = []
-    a = j = 0
+def merge_lists(left_part, right_part):
+    merged = []
+    l_idx = r_idx = 0
 
-    while a < len(left) and j < len(right):
-        if left[a] <= right[j]:
-            result.append(left[a])
-            a += 1
+    while l_idx < len(left_part) and r_idx < len(right_part):
+        if left_part[l_idx] <= right_part[r_idx]:
+            merged.append(left_part[l_idx])
+            l_idx += 1
         else:
-            result.append(right[j])
-            j += 1
+            merged.append(right_part[r_idx])
+            r_idx += 1
 
-    result.extend(left[a:])
-    result.extend(right[j:])
-    return result
+    merged.extend(left_part[l_idx:])
+    merged.extend(right_part[r_idx:])
+    return merged
 
 
-def merge_sort(data):
-    if len(data) <= 1:
-        return data
+def divide_and_merge_sort(values):
+    if len(values) <= 1:
+        return values
 
-    mid = len(data) // 2
-    left = merge_sort(data[:mid])
-    right = merge_sort(data[mid:])
-    return merge(left, right)
-
+    mid = len(values) // 2
+    left_part = divide_and_merge_sort(values[:mid])
+    right_part = divide_and_merge_sort(values[mid:])
+    return merge_lists(left_part, right_part)
