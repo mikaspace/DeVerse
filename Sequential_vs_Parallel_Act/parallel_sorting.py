@@ -1,5 +1,5 @@
 from multiprocessing import Pool
-from sequential_sorting import divide_and_merge_sort, merge_lists
+from sequential import divide_and_merge_sort, merge_lists
 
 
 def process_chunk(chunk):
